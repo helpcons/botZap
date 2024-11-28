@@ -37,7 +37,7 @@ async function start(client) {
   const caminhoImagem = path.resolve('convite.jpeg'); // Coloque o arquivo na mesma pasta do script
 
   // Mensagem a ser enviada com a imagem
-  const legenda = 'Robô de Teste\r\nParticipe do evento no dia!';
+  const legenda = 'Lançamento no Pontal Oceânico, financiamento direto com a construtora sem análise de crédito! Diga eu quero, para receber mais informações.';
 
   for (const contato of contatos) {
     const nome = contato['Nome do cliente'];
@@ -58,8 +58,8 @@ async function start(client) {
         console.error(`Erro ao enviar imagem para ${nome} (${telefone}):`, error);
       }
 
-      // Aguarda 5 segundos antes de enviar a próxima mensagem
-      await esperar(5000);
+      // Aguarda 1 minuto antes de enviar a próxima mensagem
+      await esperar(60000);
     } else {
       console.error(`Telefone inválido para ${nome}`);
     }
